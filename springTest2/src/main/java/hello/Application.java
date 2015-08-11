@@ -15,7 +15,7 @@ public class Application implements CommandLineRunner {
 	public static void main(String[] args){
 		SpringApplication.run(Application.class);
 	}
-	
+	//this implements method
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		RestTemplate restTemplate = new RestTemplate();
