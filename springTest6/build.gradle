@@ -1,0 +1,31 @@
+buildscript{
+	repositories {
+	    mavenCentral()
+	}
+	
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+
+jar {
+    baseName = 'springTest6'
+    version = '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework:spring-core:4.0.5.RELEASE",
+    "org.springframework:spring-context:4.0.5.RELEASE",
+    "org.springframework:spring-beans:4.0.5.RELEASE")
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.5'
+}
