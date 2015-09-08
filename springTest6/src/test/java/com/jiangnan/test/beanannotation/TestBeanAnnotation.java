@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
 
 import com.jiangnan.beanannotation.BeanAnnotation;
+import com.jiangnan.beanannotation.multibean.BeanInvoker;
 import com.jiangnan.test.base.UnitTestBase;
 
 @RunWith(BlockJUnit4ClassRunner.class)
@@ -30,6 +31,13 @@ public class TestBeanAnnotation extends UnitTestBase {
 		
 		bean = super.getBean("beanAnnotation");
 		bean.myHashCode();
+	}
+	
+	
+	@Test
+	public void testMultibean(){
+		BeanInvoker beanInvoker = super.getBean("beanInvoker");
+		beanInvoker.say();
 	}
 	
 }

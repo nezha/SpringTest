@@ -2,6 +2,7 @@ package com.jiangnan.beanannotation.injection.dao;
 
 import org.springframework.stereotype.Repository;
 
+//指代是一个bean
 @Repository
 public class InjectionDAOImpl implements InjectionDAO {
 	
